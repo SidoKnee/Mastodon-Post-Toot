@@ -1,6 +1,6 @@
 let nowToot = async function (content, sender=null) {
     let   d1 = new Date ();
-    const instance_uri = 'https://mastodon.online';
+    const instance_uri = 'https://mastodon.online'; // Put Your Instance in here
   // Get these from YOUR API at Mastodon :~)
     const access_token = ""; // Get this from your API in Mastodon
     // ================================================================ //
