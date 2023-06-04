@@ -1,3 +1,7 @@
+// Sending Html
+//<label for="tx1">Hello</label><textarea id="tx1" style="width:40%; height: 90%" placeholder="Now"></textarea>
+//<button onclick="nowToot(document.getElementById('tx1').value,'tx1')">Click Me</button>
+
 let nowToot = async function (content, sender=null) {
     let   d1 = new Date ();
     const instance_uri = 'https://mastodon.online'; // Put Your Instance in here
