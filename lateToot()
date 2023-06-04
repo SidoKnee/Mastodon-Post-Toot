@@ -1,0 +1,31 @@
+// Html for Sending to Script
+//label for="tx2">Hello Later</label><textarea id="tx2" style="width:40%; height: 90%" placeholder="Later"></textarea>
+//<button onclick="lateToot(document.getElementById('tx2').value,'tx2',2,10)">Click Me Later</button>
+
+let lateToot = async function (content, sender=null, hourPluss=null, ninPluss=null) {
+    let   d1 = new Date ();
+    let d2 = new Date(d1);
+    d2.setHours(d1.getHours()+hourPluss);
+    d2.setMinutes ( d1.getMinutes() + ninPluss );
+    const instance_uri = 'https://mastodon.online';
+    // Get these from YOUR API at Mastodon :~)
+    const access_token = "CxwUVNlsWQznPjtA63Mgoo1qzxaD5M0KgbcKQ93mhv0";
+    const Redirect_URI = "urn:ietf:wg:oauth:2.0:oob"; // This is Local Testing urn:ietf:wg:oauth:2.0:oob , put Your https in for Website
+    // ================================================================ //
+    await fetch(instance_uri + '/api/v1/statuses', {
+        method: "POST",
+        body: JSON.stringify({
+            status: content ,
+            "scheduled_at": d2.toJSON(),
+        }),
+        "headers": {
+            "Authorization": "Bearer " + access_token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+
+    })   // Get this from Your Textarea :~) //
+    //  document.getElementById(sender).value = '';
+    //=================================//
+    
+}
