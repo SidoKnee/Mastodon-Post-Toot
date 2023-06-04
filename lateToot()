@@ -9,7 +9,7 @@ let lateToot = async function (content, sender=null, hourPluss=null, ninPluss=nu
     d2.setMinutes ( d1.getMinutes() + ninPluss );
     const instance_uri = 'https://mastodon.online';
     // Get these from YOUR API at Mastodon :~)
-    const access_token = ""; // Get this from Your API at Your Instance 
+    const access_token = ""; // Get this from Your API at Your Instance :~)
     const Redirect_URI = "urn:ietf:wg:oauth:2.0:oob"; // This is Local Testing urn:ietf:wg:oauth:2.0:oob , put Your https in for Website
     // ================================================================ //
     await fetch(instance_uri + '/api/v1/statuses', {
